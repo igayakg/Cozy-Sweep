@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f7f5ed">
+<meta name="description" content="A little mess, a longer broom. Play a cozy pastel Snake-inspired sweeping game on your phone or laptop.">
+<title>Cozy Sweep — A little clean-up break</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+<div class="brand">
+<span>✧</span> cozy sweep</div>
+<div class="header-note">a little clean-up break</div>
+</header>
+<main>
+<section class="copy">
+<div class="eyebrow">Small mess. Big cozy energy.</div>
+<h1>A clean<br> little <em>escape.</em>
+</h1>
+<p class="intro">Meet your new favorite chore.<br>Sweep up the mess, grow your broom, and find your flow.</p>
+<div class="little-rule">
+</div>
+<div class="instructions">
+<div class="how">
+<span class="icon">🧹</span>
+<div>
+<b>Lead with your broom.</b>
+<small>The handle follows wherever you go.</small>
+</div>
+</div>
+<div class="how">
+<span class="icon">🍂</span>
+<div>
+<b>A little dirt goes a long way.</b>
+<small>Dirt +10 · trash piles +30 & extra length</small>
+</div>
+</div>
+<div class="how">
+<span class="icon">〰</span>
+<div>
+<b>Mind that growing handle.</b>
+<small>Cross your own path and it's clean-up time.</small>
+</div>
+</div>
+</div>
+<div class="tag">✿ No rush. Just one more sweep.</div>
+</section>
+<section class="game-shell" aria-label="Cozy Sweep game">
+<div class="scorebar">
+<div class="scores">
+<div>
+<div class="stat-label">Swept up</div>
+<div class="number" id="score">000</div>
+</div>
+<div class="best">
+<div class="stat-label">Personal best</div>
+<div class="number" id="best">000</div>
+</div>
+</div>
+<div class="toolbar">
+<button class="tool" id="sound" aria-label="Enable sound" title="Enable sound">♪</button>
+<button class="tool" id="pause" aria-label="Pause game" title="Pause (Space)">Ⅱ</button>
+<button class="tool" id="restart" aria-label="Restart game" title="Restart game">↻</button>
+</div>
+</div>
+<div class="board" id="board" tabindex="0" aria-label="Game board. Use arrow keys or WASD to steer. Space pauses.">
+<canvas id="game" width="640" height="640" aria-label="Broom sweeping dirt and trash">
+</canvas>
+<div class="overlay" id="overlay">
+<div class="overlay-inner">
+<svg class="hero-broom" viewBox="0 0 100 120" aria-hidden="true">
+<path d="M50 10V78" stroke="#bd9975" stroke-width="10" stroke-linecap="round"/>
+<path d="M50 12V71" stroke="#d9bd98" stroke-width="4" stroke-linecap="round"/>
+<path d="M35 74H65L80 108Q50 120 20 108Z" fill="#e3bd8e"/>
+<path d="M35 76H65L68 86H32Z" fill="#b5bca4"/>
+<path d="M38 88L31 108M47 88L45 112M56 88L58 111M63 89L70 107" stroke="#c7986c" stroke-width="2" stroke-linecap="round"/>
+<path d="M13 29L16 24L19 29L24 32L19 35L16 40L13 35L8 32Z" fill="#b7cdb6"/>
+<path d="M78 54L81 49L84 54L89 57L84 60L81 65L78 60L73 57Z" fill="#d7bedf"/>
+</svg>
+<h2 id="overlay-title">Ready, set, sweep.</h2>
+<p id="overlay-text">A happier floor starts here. Collect the mess and watch your broom handle grow.</p>
+<button class="primary" id="play">Let's sweep &nbsp; →</button>
+<span class="mini" id="overlay-note">Cozy mode · gentle pace · wraparound edges</span>
+</div>
+</div>
+</div>
+<div class="underbar">
+<label class="mode-wrap">Your pace <select id="mode" aria-label="Game mode">
+<option value="cozy">✿ Cozy</option>
+<option value="classic">✧ Classic</option>
+</select>
+</label>
+<span class="status">
+<i>
+</i>
+<span id="status">A fresh floor awaits</span>
+</span>
+</div>
+<div class="keyboard">
+<span class="key">↑</span>
+<span class="key">← ↓ →</span>
+<span>or WASD to move &nbsp; · &nbsp;</span>
+<span class="key">space</span>
+<span>to pause</span>
+</div>
+<div class="mobile-controls">
+<span class="mobile-hint">Swipe the floor<br>or use the arrows</span>
+<div class="dpad">
+<button class="direction up" data-dir="up" aria-label="Move up">↑</button>
+<button class="direction left" data-dir="left" aria-label="Move left">←</button>
+<button class="direction down" data-dir="down" aria-label="Move down">↓</button>
+<button class="direction right" data-dir="right" aria-label="Move right">→</button>
+</div>
+<span class="mobile-hint">Tiny swipes.<br>Happy floors. ✿</span>
+</div>
+</section>
+</main>
+<footer>
+<span>MADE FOR YOUR LITTLE MOMENTS OF PAUSE</span>
+<span>STAY COZY. SWEEP HAPPY. ✧</span>
+</footer>
+<script src="js/game.js" defer>
+</script>
+</body>
+</html>
